@@ -8,3 +8,10 @@ An Udacity iOS development project upgraded version
 
 1. Users can either select photo from photo library or take a photo from camera.
 2. The the text label is movable, user can choose where it to display, the font style and size is always adjustable.
+3. Image can be shared.
+
+
+
+
+Cheers!
+Zack
