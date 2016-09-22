@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Photos
 
 var globalNumber = 1
 
@@ -123,7 +124,14 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             meme.memedImage1 = self.generateMemedImage()
         self.saveContext()
         globalNumber = 0
-        self.navigationController?.popViewController(animated: true)
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: meme.memedImage1!)
+            }, completionHandler: {(success, error) -> Void in
+                if success {
+                    self.navigationController?.popViewController(animated: true)
+                    print("finished saving image")
+                }
+            })
     }
     
     func generateMemedImage() -> UIImage {

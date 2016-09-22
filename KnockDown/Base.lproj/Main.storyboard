@@ -10,7 +10,7 @@
         <!--Meme Table View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MemeTableViewController" customModule="KnockDown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeTableViewController" customModule="SimpleMeme2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -83,7 +83,7 @@
         <!--Image View Controller-->
         <scene sceneID="tTZ-wt-0EP">
             <objects>
-                <viewController storyboardIdentifier="ImageViewController" id="Mwp-sz-Zkq" customClass="ImageViewController" customModule="KnockDown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageViewController" id="Mwp-sz-Zkq" customClass="ImageViewController" customModule="SimpleMeme2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tXe-Gz-uWr"/>
                         <viewControllerLayoutGuide type="bottom" id="sbO-JE-Ff2"/>
@@ -98,6 +98,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="BxE-0s-0ZN" appends="YES" id="NOa-o9-K2z"/>
+                                            <outletCollection property="gestureRecognizers" destination="5P4-aR-RJo" appends="YES" id="a3t-71-3Cy"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -135,13 +136,18 @@
                         <action selector="dismissViewTap:" destination="Mwp-sz-Zkq" id="lFH-li-ozd"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="5P4-aR-RJo">
+                    <connections>
+                        <action selector="LongPressAction:" destination="Mwp-sz-Zkq" id="veU-rs-6v4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1584.8" y="786.65667166416802"/>
         </scene>
         <!--Manage Page View Controller-->
         <scene sceneID="FcW-hI-xsP">
             <objects>
-                <pageViewController storyboardIdentifier="ManagePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="8" navigationOrientation="horizontal" spineLocation="none" id="WiB-gu-beE" customClass="ManagePageViewController" customModule="KnockDown" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="ManagePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="8" navigationOrientation="horizontal" spineLocation="none" id="WiB-gu-beE" customClass="ManagePageViewController" customModule="SimpleMeme2_0" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkf-Wb-r3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2246" y="788"/>
@@ -149,7 +155,7 @@
         <!--Meme View Controller-->
         <scene sceneID="vwO-xN-LDC">
             <objects>
-                <viewController storyboardIdentifier="MemeViewController" id="1c6-St-4cf" customClass="MemeViewController" customModule="KnockDown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeViewController" id="1c6-St-4cf" customClass="MemeViewController" customModule="SimpleMeme2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I16-LS-CYc"/>
                         <viewControllerLayoutGuide type="bottom" id="CGB-dW-SPw"/>
@@ -248,7 +254,7 @@
         <!--Image Crop View Controller-->
         <scene sceneID="sGG-3c-sV2">
             <objects>
-                <viewController storyboardIdentifier="ImageCropViewController" id="f6W-4c-9IZ" customClass="ImageCropViewController" customModule="KnockDown" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageCropViewController" id="f6W-4c-9IZ" customClass="ImageCropViewController" customModule="SimpleMeme2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qc8-yz-Buq"/>
                         <viewControllerLayoutGuide type="bottom" id="xtW-HB-GiG"/>
@@ -279,7 +285,7 @@
                                     <action selector="showHideFrameBtn:" destination="f6W-4c-9IZ" eventType="touchUpInside" id="oIj-YS-9qt"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Joc-nj-Wz3" customClass="AKImageCropperView" customModule="KnockDown" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Joc-nj-Wz3" customClass="AKImageCropperView" customModule="SimpleMeme2_0" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

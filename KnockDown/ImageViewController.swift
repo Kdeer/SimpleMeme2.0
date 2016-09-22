@@ -53,6 +53,21 @@ class ImageViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func LongPressAction(_ sender: UILongPressGestureRecognizer) {
+        sender.minimumPressDuration = 0.8
+        
+        // set up activity view controller
+        let objectsToShare: [AnyObject] = [ memeImageView.image! ]
+        let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    
+    
 
     
     func updateMinZoomScaleForSize(_ size: CGSize) {
